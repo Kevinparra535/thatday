@@ -3,63 +3,32 @@
 @import "./../tokens/typos";
 
 .header {
-  position: sticky;
+  padding: $space $space_x2;
+  display: flex;
+  position: fixed;
   z-index: 99;
-  top: 0px;
-  background-color: $color-bg-claro;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: get-opacity($color-primario, .9);
 }
 
 .nav {
-  padding: $space 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  background-color: $color-claro;
+  color: $color-claro;
   &__logo {
-    text-align: center;
-    lottie-player {
-      width: 100%;
-      height: 50px;
-      object-fit: cover;
-    }
-  }
-  &__links {
-    margin: 0 auto;
-    a {
-      margin: 0 $space_half;
-      color: $color-oscuro;
-    }
-  }
-  @include media(desktop-s) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: $color-claro;
-    &__logo {
-      width: 10%;
-      lottie-player {
-        width: 100%;
-        height: 50px;
-        object-fit: cover;
-        object-position: bottom;
-      }
+    cursor: pointer;
+    img {
+      margin-right: $space;
+      width: 20px;
     }
-    &__links {
-      padding-right: $space_x2 * 2;
-      margin: 0;
-
-      a {
-        margin: 0 $space;
-        color: $color-oscuro;
-        &:hover {
-          text-decoration: line-through;
-          color: $color-primario;
-        }
-      }
+    h1 {
+      font-weight: $normal;
+      font-family: $Fuente2;
+      @include font-size($h3);
     }
   }
 }

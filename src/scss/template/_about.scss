@@ -1,0 +1,28 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.about {
+  padding: 60px $space_x3;
+  position: relative;
+  z-index: 3;
+  grid-gap: $space_x3;
+  height: 100%;
+  background-color: $color-bg-claro;
+  &__info {
+    padding: $space_x3;
+    margin: 0 auto;
+    width: 60%;
+    h2 {
+      padding-bottom: $space_x2;
+      font-family: $Fuente2;
+      color: $color-primario;
+      @include font-size(40px);
+    }
+  }
+  &__designs {
+    padding: $space_x3;
+    width: 100%;
+    height: 100%;
+  }
+}

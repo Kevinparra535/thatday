@@ -57,15 +57,18 @@
 // Estilo de los botones
 @mixin botones {
 	padding: $space $space_x2;
-	border: 1px solid $color-oscuro;
-	border-radius: 1px;
-	color: $color-claro;
-	background-color: $color-primario;
+	width: 250px;
+	font-family: $Fuente2;
+	font-weight: $medium;
+	border: none;
+	border-radius: 5px;
+	color: $color-variante;
+	background-color: $color-claro;
 	transition: 1s;
 	cursor: pointer;
 	@include sombras;
 	&:hover {
-		color: $color-variante;
+		color: $color-claro;
 		text-decoration: none;
 		background-color: $color-secundario;
 	}

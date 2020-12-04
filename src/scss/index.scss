@@ -8,16 +8,7 @@
 @import "./tokens/typos";
 
 @import "./organims/fonts";
-@import "./pages/main.scss";
-@import "./components/Works.scss";
-@import "./atoms/buttons";
-@import "./atoms/swiper";
-@import "./template/aboutMe";
-@import "./pages/workDetail.scss";
-@import "./components/Nav.scss";
-@import "./components/Footer.scss";
-@import "./components/Scene.scss";
-@import "./pages/about.scss";
-@import "./pages/contact.scss";
-@import "./pages/agencies";
-@import "./atoms/cards";
+@import "./components/nav";
+@import "./atoms/root";
+@import "./organims/hero";
+@import "./template/about";
