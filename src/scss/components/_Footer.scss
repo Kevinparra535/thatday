@@ -1,0 +1,28 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+footer {
+  padding: $space_x3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  color: $color-claro;
+  background-color: $color-oscuro;
+  a {
+    @include botones;
+  }
+  @include media(desktop-s) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    a {
+      @include botones;
+    }
+  }
+}

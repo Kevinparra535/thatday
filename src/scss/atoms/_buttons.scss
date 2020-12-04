@@ -1,0 +1,9 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.button {
+  margin: $space_x2;
+  font-family: $Fuente2;
+  @include botones;
+}

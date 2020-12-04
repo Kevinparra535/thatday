@@ -1,0 +1,114 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.workDetail {
+  padding-top: 70px;
+  position: relative;
+  z-index: 3;
+  background-color: $color-claro;
+  &__grid {
+    align-items: center;
+    @include display-grid;
+    @include grid-template-columns(auto);
+    &--title {
+      margin-top: $space_x3;
+      text-align: center;
+      @include grid-row(2,2);
+      h1 {
+        width: 100%;
+        color: $color-secundario;
+        @include font-size($h1);
+      }
+    }
+    &--image {
+      text-align: right;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  &__description {
+    padding: $space;
+    margin: $space_x3 auto;
+    width: 90%;
+    font-family: $Fuente2;
+    font-weight: $normal;
+    @include font-size($p);
+  }
+  &__pages {
+    padding: $space_x3;
+    margin: $space_x3 auto;
+    width: 100%;
+    h1 {
+      font-weight: $light;
+      color: $color-primario;
+      @include font-size($h2);
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__links {
+    margin: $space_x3 auto;
+    text-align: center;
+    a {
+      @include botones;
+    }
+  }
+  @include media(desktop-s) {
+  padding-top: 0px;
+    &__grid {
+      align-items: center;
+      @include display-grid;
+      @include grid-template-columns(auto 75%);
+      &--title {
+        text-align: left;
+        transform: rotate(-90deg);
+        @include grid-row(1,1);
+        h1 {
+          width: 100%;
+          color: $color-oscuro;
+          @include font-size($h1);
+        }
+      }
+      &--image {
+        text-align: right;
+        img {
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    &__description {
+      padding: $space_x3;
+      margin: $space_x3 auto;
+      width: 70%;
+      font-family: $Fuente2;
+      font-weight: $normal;
+      @include font-size($p);
+    }
+    &__pages {
+      padding: $space_x3;
+      margin: $space_x3 auto;
+      width: 70%;
+      h1 {
+        font-weight: $light;
+        color: $color-primario;
+        @include font-size($h2);
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &__links {
+      margin: $space_x3 auto;
+      text-align: center;
+    }
+  }
+}

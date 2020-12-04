@@ -1,0 +1,128 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.about {
+  padding: $space_x3 $space;
+  height: 100%;
+  background-color: $color-bg-oscuro;
+  h1 {
+    margin-bottom: $space_x3;
+    font-family: $Fuente1;
+    font-weight: $medium;
+    text-align: center;
+    text-transform: capitalize;
+    color: $color-claro;
+    @include font-size($h2);
+  }
+  h2 {
+    margin-bottom: $space_x3;
+    font-family: $Fuente2;
+    font-weight: $medium;
+    text-align: left;
+    text-transform: capitalize;
+    color: $color-claro;
+    @include font-size($h2);
+  }
+  .btnCV {
+    text-align: center;
+    a {
+      margin: 0 auto;
+      @include botones;
+    }
+  }
+  &__skills {
+    h2 {
+      text-align: center;
+    }
+    .bars {
+      width: 90%;
+    }
+    .bar-contain {
+      width: 100%;
+      padding: 0;
+      margin: 0 0 46px 0;
+      background: $color-bg-claro;
+      display: inline-block;
+      height: 42px;
+      border-radius: 3px;
+    }
+
+    .bar-label {
+      color: $color-claro;
+      font: 15px "opensans-bold", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+
+    .bar-expand {
+      left: 0;
+      top: 0;
+      margin: 0 0 46px 0;
+      padding: 0 24px 0 0;
+      background: $color-primario;
+      display: inline-block;
+      height: 40px;
+      border-radius: 3px 0 0 3px;
+    }
+  }
+  @include media(desktop-s) {
+    padding: 100px $space_x3;
+    h1 {
+      margin-bottom: $space_x3;
+      font-family: $Fuente1;
+      font-weight: $medium;
+      text-align: center;
+      color: $color-claro;
+      @include font-size($h2);
+    }
+    h2 {
+      margin-bottom: $space_x3;
+      font-family: $Fuente2;
+      font-weight: $medium;
+      text-align: left;
+      color: $color-claro;
+      @include font-size($h2);
+    }
+    &__skills {
+      padding: $space_x3;
+      .bars {
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      .bar-contain {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 46px 0;
+        display: inline-block;
+        height: 42px;
+        border-radius: 3px;
+      }
+
+      .bar-label {
+        font: 15px "opensans-bold", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        position: relative;
+        top: 10px;
+        left: 10px;
+      }
+
+      .bar-expand {
+        left: 0;
+        top: 0;
+        margin: 0 0 46px 0;
+        padding: 0 24px 0 0;
+        display: inline-block;
+        height: 40px;
+        border-radius: 3px 0 0 3px;
+      }
+    }
+  }
+}
