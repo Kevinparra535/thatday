@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/css/index.css" />
+    <title>Your Project</title>
+  </head>
+  <body>
+    <main class="main">
+      <div>
+        <img src="../src/img/design/mockup.png" alt="your design" />
+        <canvas></canvas>
+      </div>
+      <div class="main__menu">
+        <div class="tab">
+          <button
+            class="tablinks"
+            onclick="openCity(event, 'step1')"
+            id="defaultOpen"
+          >
+            Momento
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'step2')">
+            Textos
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'step3')">
+            Diseño
+          </button>
+        </div>
+
+        <div id="step1" class="tabcontent">
+          <p>Selecciona la hora y el lugar de ese momento especial.</p>
+          <label for="location">Lugar del momento</label>
+          <p>
+            <input
+              class="text"
+              name="location"
+              id="location"
+              type="text"
+              placeholder="Ubicacion"
+              value="Cali, Colombia"
+            />
+          </p>
+
+          <label for="moment">Hora y fecha del momento</label>
+          <p>
+            <input
+              class="date"
+              type="text"
+              name="year"
+              id="year"
+              value="2020"
+              placeholder="Año"
+            />
+            <select class="date" id="month">
+              <option value="Enero">Enero</option>
+              <option value="Febrero">Febrero</option>
+              <option value="Marzo">Marzo</option>
+              <option value="Abril">Abril</option>
+              <option value="Mayo">Mayo</option>
+              <option value="Junio">Junio</option>
+              <option value="Julio">Julio</option>
+              <option value="Agosto">Agosto</option>
+              <option value="Septiembre">Septiembre</option>
+              <option value="Octubre">Octubre</option>
+              <option value="Noviembre">Noviembre</option>
+              <option value="Diciembre">Diciembre</option>
+            </select>
+
+            <input
+              class="date"
+              type="text"
+              name="day"
+              id="day"
+              value="01"
+              placeholder="Dia"
+            />
+          </p>
+          <p>
+            <input name="time" type="time" id="momentTime" />
+          </p>
+          <div class="next__step">
+            <button onclick="openCity(event, 'step2')">Siguiente</button>
+          </div>
+        </div>
+
+        <div id="step2" class="tabcontent">
+          <p>Añade un título y una nota al pie para que tu mapa sea único.</p>
+          <label for="title">Puedes escribir un título o dejarlo vacío</label>
+          <p>
+            <input
+              class="text"
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Somos estrellas nadando en el mar de lo infinito"
+            />
+          </p>
+
+          <p>
+            <textarea
+              class="text"
+              type="text"
+              name="subtitle"
+              id="subtitle"
+              style="resize: none"
+              cols="30"
+            ></textarea>
+          </p>
+          <div class="next__step">
+            <button onclick="openCity(event, 'step3')">Siguiente</button>
+          </div>
+        </div>
+
+        <div id="step3" class="tabcontent">
+          <h3>step3</h3>
+          <p>step3 is the capital of Japan.</p>
+          <div class="next__step">
+            <button onclick="openCity(event, 'step3')">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal__content">
+        <!-- <span class="close">&times;</span> -->
+        <h2>Hola! Bienvenidos/as</h2>
+        <p>Completa estos campos para poder guardar tus progresos</p>
+        <br />
+        <div class="modal__content--form">
+          <label for="uname">Nombre</label>
+          <p><input type="text" placeholder="Tu nombre" id="uname" /></p>
+          <label for="email">Correo</label>
+          <p>
+            <input type="email" placeholder="Correo Electronico" id="email" />
+          </p>
+          <label for="info">Motivo</label>
+          <p>
+            <select id="info">
+              <option value="Aniversario">Aniversario</option>
+              <option value="firtsDate">Primera Cita</option>
+              <option value="Novia">Novia</option>
+              <option value="Novio">Novio</option>
+            </select>
+          </p>
+        </div>
+        <button onclick="login()">Continuar</button>
+      </div>
+    </section>
+
+    <script src="../src/js/modal.js"></script>
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/accordion.js"></script>
+    <script src="../src/js/getTime.js"></script>
+  </body>
+</html>

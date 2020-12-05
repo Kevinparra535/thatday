@@ -16,7 +16,6 @@
 @import "../Tokens/spacings";
 @import "../Tokens/typos";
 
-
 // Otorga mayuscula automatica al tipo de fuente 2
 
 @mixin titulos($fuente) {
@@ -81,18 +80,18 @@
 // Estilo de los inputs
 @mixin inputs {
 	padding: $space;
-	width: 50%;
+	width: 100%;
 	font-size: $p;
 	border: none;
-	border: 1px solid $color-oscuro;
+	border-bottom: 1px solid $color-primario;
 	outline: none;
 	background-color: $color-claro;
 	cursor: pointer;
 	&:placeholder {
-		color: $color-oscuro;
+		color: $color-primario;
 	}
 	@include media(desktop-s) {
-		width: 40%;
+		width: 100%;
 	}
 }
 
@@ -204,9 +203,9 @@
 		@include font-size($p);
 	}
 	&:hover {
-		background-color: get-opacity($color-secundario, .8);
+		background-color: get-opacity($color-secundario, 0.8);
 		img {
-			opacity: .8;
+			opacity: 0.8;
 		}
 	}
 }

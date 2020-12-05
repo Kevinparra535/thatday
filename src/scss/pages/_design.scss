@@ -1,0 +1,48 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.main {
+  img {
+    position: absolute;
+    width: 75%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+  }
+  &__menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 35%;
+    height: 100%;
+    background-color: $color-claro;
+    input[type="time"] {
+      @include inputs;
+    }
+    label {
+      font-weight: $medium;
+    }
+  }
+}
+
+.date {
+  padding: $space;
+  width: 100%;
+  font-size: $p;
+  border: none;
+  border-bottom: 1px solid $color-primario;
+  outline: none;
+  background-color: $color-claro;
+  cursor: pointer;
+  &:placeholder {
+    color: $color-primario;
+  }
+  @include media(desktop-s) {
+    width: 32%;
+  }
+}
+.text {
+  @include inputs;
+}
