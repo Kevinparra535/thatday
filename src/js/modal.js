@@ -1,12 +1,9 @@
-var modal = document.getElementById("myModal");
-
-var btn = document.getElementById("myBtn");
-
-var span = document.getElementsByClassName("close")[0];
+const modal = document.getElementById("myModal");
 
 function login() {
+  document.title = `Diseño de ${document.getElementById("uname").value}`;
   modal.style.display = "none";
-};
+}
 
 window.onclick = function (event) {
   if (event.target == modal) {
