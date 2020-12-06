@@ -40,3 +40,9 @@
     color: get-opacity($color-oscuro, 0.7);
   }
 }
+
+.tabcontent__step3 {
+  grid-gap: $space_x2;
+  @include display-grid;
+  @include grid-template-columns(auto auto auto auto);
+}

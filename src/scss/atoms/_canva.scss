@@ -2,11 +2,39 @@
 @import "./../tokens/spacings";
 @import "./../tokens/typos";
 
-canvas {
-  // position: relative;
-  // left: 23%;
-  // margin-top: 5%;
-  // width: 24%;
-  // height: 65vh;
-  // border: 1px solid #000000;
+.canvas {
+  position: fixed;
+  z-index: -1;
+  top: 5%;
+  left: 22%;
+  width: 500px;
+  height: 600px;
+  background-image: url("./../img/design/canvaDefault.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include media(tablet) {
+    top: 5%;
+    left: 22%;
+    width: 500px;
+    height: 600px;
+  }
+  @include media(desktop-s) {
+    top: 5%;
+    left: 22%;
+    width: 500px;
+    height: 600px;
+  }
+  @include media(desktop-m) {
+    top: 8%;
+    left: 22%;
+    width: 400px;
+    height: 500px;
+  }
+  @include media(desktop-l) {
+    top: 5%;
+    left: 22%;
+    width: 500px;
+    height: 600px;
+  }
 }

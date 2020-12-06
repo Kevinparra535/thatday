@@ -11,6 +11,6 @@ window.onclick = function (event) {
   }
 };
 
-window.onload = setTimeout(() => {
-  modal.style.display = "block";
-}, 1000);
+// window.onload = setTimeout(() => {
+//   modal.style.display = "block";
+// }, 1000);

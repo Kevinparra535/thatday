@@ -11,21 +11,21 @@
     <main class="main">
       <div>
         <img src="../src/img/design/mockup.png" alt="your design" />
-        <canvas></canvas>
+        <div class="canvas" id="canva__design"></div>
       </div>
       <div class="main__menu">
         <div class="tab">
-          <button
-            class="tablinks"
-            onclick="openCity(event, 'step1')"
-            id="defaultOpen"
-          >
+          <button class="tablinks" onclick="openCity(event, 'step1')">
             Momento
           </button>
           <button class="tablinks" onclick="openCity(event, 'step2')">
             Textos
           </button>
-          <button class="tablinks" onclick="openCity(event, 'step3')">
+          <button
+            class="tablinks"
+            onclick="openCity(event, 'step3')"
+            id="defaultOpen"
+          >
             Diseño
           </button>
         </div>
@@ -115,8 +115,17 @@
         </div>
 
         <div id="step3" class="tabcontent">
-          <h3>step3</h3>
-          <p>step3 is the capital of Japan.</p>
+          <p>Elige el diseño y luego el tamaño:</p>
+          <div class="tabcontent__step3">
+            <button class="cube cube1"></button>
+            <button class="cube cube2"></button>
+            <button class="cube cube3"></button>
+            <button class="cube cube4"></button>
+            <button class="cube cube5"></button>
+            <button class="cube cube6"></button>
+            <button class="cube cube7"></button>
+            <button class="cube cube8"></button>
+          </div>
           <div class="next__step">
             <button onclick="openCity(event, 'step3')">Comprar</button>
           </div>

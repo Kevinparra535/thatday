@@ -210,6 +210,21 @@
 	}
 }
 
+@mixin cubos {
+	margin: 0 auto;
+	width: 90px;
+	height: 90px;
+	border: none;
+	background-color: black;
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+	&:hover {
+		border: 1px solid $color-secundario;
+		opacity: 0.9;
+	}
+}
+
 //Funcion para el texto responsivo
 @function calculateRem($size) {
 	$remSize: $size / 16px;

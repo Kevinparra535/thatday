@@ -1,0 +1,38 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.cube {
+  @include cubos;
+}
+.cube1 {
+  background-image: url("./../img/cubes/cube1.webp");
+}
+
+.cube2 {
+  background: $color-secundario;
+}
+
+.cube3 {
+  background: $color-primario;
+}
+
+.cube4 {
+  background: $color-variante;
+}
+
+.cube5 {
+  background: $color-oscuro;
+}
+
+.cube6 {
+  background-image: url("./../img/cubes/cube6.webp");
+}
+
+.cube7 {
+  background-image: url("./../img/cubes/cube7.webp");
+}
+
+.cube8 {
+  background-image: url("./../img/cubes/cube8.webp");
+}
