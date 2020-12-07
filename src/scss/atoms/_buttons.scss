@@ -3,9 +3,8 @@
 @import "./../tokens/typos";
 
 .next__step {
-  padding-top: calc(100% - 50%);
-  position: relative;
-  bottom: 20px;
+  position: absolute;
+  bottom: calc(100% - 98vh);
   button {
     padding: $space $space_x2;
     width: 450px;
@@ -23,5 +22,8 @@
       text-decoration: none;
       background-color: $color-secundario;
     }
+  }
+  select {
+    @include inputs;
   }
 }

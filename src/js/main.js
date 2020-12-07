@@ -54,7 +54,7 @@ for (let i = 0; i <= cubes.length; i++) {
     canvaBackground.style.background = `url('${background[i]}')`;
     canvaBackground.style.backgroundRepeat = "no-repeat";
     canvaBackground.style.backgroundSize = "cover";
-    canvaBackground.style.backgroundPosition = "center";
+    canvaBackground.style.backgroundPosition = "top";
 
     console.log(i, background[i]);
   });

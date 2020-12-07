@@ -10,22 +10,47 @@
   <body>
     <main class="main">
       <div>
-        <img src="../src/img/design/mockup.png" alt="your design" />
-        <div class="canvas" id="canva__design"></div>
+        <img
+          class="canvas__preview"
+          src="../src/img/design/mockup.png"
+          id="preview"
+          alt="your design"
+        />
+        <div class="canvas" id="canva__design">
+          <h2 class="canvas__title">
+            Somos estrellas nadando en el mar de lo infinito
+          </h2>
+          <img
+            class="canvas__map"
+            src="./../src/img/design/canva__map.webp"
+            alt="map"
+          />
+          <div class="canvas__subtitle">
+            <p>
+              Debajo de las estrellas en Cali, Colombia. Un 01 de Enero del
+              2020, a las 11:39
+            </p>
+            <img
+              class="spotify"
+              src="./../src/img/design/spotify__code.png"
+              alt="Your Song"
+            />
+          </div>
+        </div>
       </div>
       <div class="main__menu">
         <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'step1')">
+          <button
+            class="tablinks"
+            onclick="openCity(event, 'step1')"
+            id="defaultOpen"
+          >
             Momento
           </button>
           <button class="tablinks" onclick="openCity(event, 'step2')">
             Textos
           </button>
-          <button
-            class="tablinks"
-            onclick="openCity(event, 'step3')"
-            id="defaultOpen"
-          >
+          <button class="tablinks" onclick="openCity(event, 'step3')">
             Diseño
           </button>
         </div>
@@ -110,6 +135,17 @@
               cols="30"
             ></textarea>
           </p>
+
+          <p>Para hacerlo mas especial, agrega una canción</p>
+          <label for="">Link de spotify</label>
+          <p>
+            <input
+              class="text"
+              type="text"
+              placeholder="Link de canción en spotify"
+            />
+          </p>
+
           <div class="next__step">
             <button onclick="openCity(event, 'step3')">Siguiente</button>
           </div>
@@ -128,6 +164,20 @@
             <button class="cube cube8"></button>
           </div>
           <div class="next__step">
+            <p>
+              <select
+                name="picture_size"
+                id="picture_size"
+                onchange="resizeCanva(this.value)"
+              >
+                <option value="picture_medium">
+                  Cuadro Mediano (27 x 38 cm)
+                </option>
+                <option value="picture_small">
+                  Cuadro Pequeño (30 x 20 cm)
+                </option>
+              </select>
+            </p>
             <button onclick="openCity(event, 'step3')">Comprar</button>
           </div>
         </div>
@@ -165,6 +215,7 @@
     <script src="/__/firebase/8.1.2/firebase-app.js"></script>
     <script src="../src/js/modal.js"></script>
     <script src="../src/js/main.js"></script>
+    <script src="../src/js/canvaSize.js"></script>
     <script src="../src/js/accordion.js"></script>
     <script src="../src/js/getTime.js"></script>
     <script src="/__/firebase/8.1.2/firebase-analytics.js"></script>

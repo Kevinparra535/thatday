@@ -1,0 +1,81 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.canvas__small {
+  padding: $space 0;
+  align-items: center;
+  position: fixed;
+  z-index: -1;
+  top: 5%;
+  left: 24%;
+  width: 500px;
+  height: 600px;
+  background-image: url("./../img/design/canvaDefault.webp");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  @include display-grid;
+  @include grid-template-columns(auto);
+  @include grid-template-rows(auto auto auto);
+
+  .canvas__map {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  &__subtitle {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    color: $color-claro;
+    font-weight: $light;
+    @include font-size(5px);
+    .spotify {
+      position: relative;
+      margin: 0 auto;
+      width: 70px;
+      height: auto;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+  }
+  @include media(tablet) {
+    top: 5%;
+    left: 22%;
+    width: 500px;
+    height: 600px;
+  }
+  @include media(desktop-s) {
+    top: 5%;
+    left: 22%;
+    width: 500px;
+    height: 500px;
+  }
+  @include media(desktop-m) {
+    top: 25%;
+    left: 27%;
+    width: 230px;
+    height: 370px;
+  }
+  @include media(desktop-l) {
+    top: 10%;
+    left: 0%;
+    width: 70%;
+    height: 480px;
+  }
+}
+
+.small {
+  &__title {
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-claro;
+    font-weight: $normal;
+    @include font-size(4px);
+  }
+}
