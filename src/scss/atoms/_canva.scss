@@ -26,14 +26,6 @@
     font-weight: $normal;
     @include font-size(8px);
   }
-  .canvas__map {
-    position: relative;
-    margin: 0 auto;
-    width: 230px;
-    height: 230px;
-    border-radius: 100%;
-    object-fit: cover;
-  }
   &__subtitle {
     margin: 0 auto;
     width: 80%;
@@ -41,14 +33,6 @@
     color: $color-claro;
     font-weight: $light;
     @include font-size(5px);
-    .spotify {
-      position: relative;
-      margin: 0 auto;
-      width: 70px;
-      height: auto;
-      border-radius: 5px;
-      object-fit: cover;
-    }
   }
   @include media(tablet) {
     top: 5%;
@@ -74,4 +58,23 @@
     width: 70%;
     height: 480px;
   }
+}
+
+.canvas__map {
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.spotify {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  width: 70px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
 }
