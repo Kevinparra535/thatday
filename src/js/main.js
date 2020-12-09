@@ -1,4 +1,8 @@
+let canvaSubtitle = document.getElementById("canvas__subtitle");
+let canvaTitle = document.getElementById("canvas__title");
+
 function subTitle() {
+  let title = document.getElementById("title").value || "Escribe un titulo";
   let location = document.getElementById("location").value || "Cali, Colombia";
   let year = document.getElementById("year").value || "2020";
   let month = document.getElementById("month").value || "2020";
@@ -6,6 +10,8 @@ function subTitle() {
   let momentTime = document.getElementById("momentTime").value || "12:00 am";
   let subtitle = `Debajo de las estrellas en ${location}. Un ${day} de ${month} del ${year}, a las ${momentTime}`;
   document.getElementById("subtitle").value = `${subtitle}`;
+  canvaSubtitle.innerHTML = `<p>${subtitle}</p>`;
+  canvaTitle.innerHTML = `${title}`;
 }
 
 // Change Tabs
@@ -60,3 +66,5 @@ for (let i = 0; i <= cubes.length; i++) {
   });
   console.log(i);
 }
+
+subTitle();
