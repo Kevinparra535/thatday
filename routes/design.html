@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="../src/css/index.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu4ZvFrLFmxzJdHM5zaGGmGxggpstfHQ0&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
     <title>Your Project</title>
   </head>
   <body>
@@ -22,14 +26,15 @@
           </h2>
           <img
             class="canvas__map"
+            id="canvas__map"
             src="./../src/img/design/canva__map.webp"
             alt="map"
           />
           <div class="canvas__subtitle">
             <p id="canvas__subtitle"></p>
             <img
+              id="codeSpotify"
               class="spotify"
-              id="spotify"
               src="./../src/img/design/spotify__code.png"
               alt="Your Song"
             />
@@ -56,16 +61,25 @@
         <div id="step1" class="tabcontent">
           <p>Selecciona la hora y el lugar de ese momento especial.</p>
           <label for="location">Lugar del momento</label>
-          <p>
-            <input
-              class="text"
-              name="location"
-              id="location"
-              type="text"
-              placeholder="Ubicacion"
-              value="Cali, Colombia"
-            />
-          </p>
+          <div id="pac-card">
+            <div id="location__container">
+              <p>
+                <input
+                  class="text"
+                  id="location__input"
+                  type="text"
+                  placeholder="Ubicación del momento"
+                  value="Bogotá, Colombia"
+                />
+              </p>
+            </div>
+          </div>
+          <div id="map"></div>
+          <div class="infowindow__content" id="infowindow__content">
+            <img src="" width="16" height="16" id="place-icon" />
+            <span id="place-name" class="title"></span><br />
+            <span id="place-address"></span>
+          </div>
 
           <label for="moment">Hora y fecha del momento</label>
           <p>
@@ -134,11 +148,14 @@
           </p>
 
           <p>Para hacerlo mas especial, agrega una canción</p>
-          <label for="">Link de spotify</label>
+          <label for="urlSpotify">Link de spotify</label>
           <p>
             <input
               class="text"
-              type="text"
+              type="url"
+              id="urlSpotify"
+              name="urlSpotify"
+              onchange="getSpotifyUrl()"
               placeholder="Link de canción en spotify"
             />
           </p>
@@ -208,7 +225,7 @@
         <button onclick="login()">Continuar</button>
       </div>
     </section>
-
+    <link rel="stylesheet" href="../src/css/index.css" />
     <script src="/__/firebase/8.1.2/firebase-app.js"></script>
     <script src="../src/js/modal.js"></script>
     <script src="../src/js/main.js"></script>

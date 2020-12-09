@@ -28,7 +28,7 @@
   }
   &__subtitle {
     margin: 0 auto;
-    width: 80%;
+    width: 50%;
     text-align: center;
     color: $color-claro;
     font-weight: $light;
@@ -67,6 +67,7 @@
   height: 250px;
   border-radius: 100%;
   object-fit: cover;
+  transition: 1s ease-in-out;
 }
 
 .spotify {
@@ -77,4 +78,5 @@
   height: auto;
   border-radius: 5px;
   object-fit: cover;
+  transition: 500ms ease-in-out;
 }

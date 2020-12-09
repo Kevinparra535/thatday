@@ -3,11 +3,9 @@
 @import "./../tokens/typos";
 
 .next__step {
-  position: absolute;
-  bottom: calc(100% - 98vh);
   button {
     padding: $space $space_x2;
-    width: 450px;
+    width: 100%;
     font-family: $Fuente2;
     font-weight: $medium;
     border: none;
@@ -25,5 +23,30 @@
   }
   select {
     @include inputs;
+  }
+  @include media(desktop-s) {
+    position: absolute;
+    bottom: calc(100% - 98vh);
+    button {
+      padding: $space $space_x2;
+      width: 450px;
+      font-family: $Fuente2;
+      font-weight: $medium;
+      border: none;
+      border-radius: 5px;
+      color: $color-claro;
+      background-color: $color-primario;
+      transition: 1s;
+      cursor: pointer;
+      @include sombras;
+      &:hover {
+        color: $color-claro;
+        text-decoration: none;
+        background-color: $color-secundario;
+      }
+    }
+    select {
+      @include inputs;
+    }
   }
 }

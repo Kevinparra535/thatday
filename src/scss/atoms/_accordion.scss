@@ -5,33 +5,33 @@
 .tab {
   overflow: hidden;
   background-color: $color-claro;
-}
-
-.tab button {
-  padding: $space_x2;
-  margin: 0;
-  float: left;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  color: $color-claro;
-  background-color: $color-primario;
-  transition: 0.4s;
-  cursor: pointer;
-  @include font-size($p);
-}
-
-.tab button:hover {
-  background-color: $color-secundario;
-}
-
-.tab button.active {
-  background-color: $color-variante;
+  @include display-grid;
+  @include grid-template-columns(auto auto auto);
+  button {
+    width: 100%;
+    padding: $space_x2;
+    margin: 0;
+    float: left;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    color: $color-claro;
+    background-color: $color-primario;
+    transition: 0.4s;
+    cursor: pointer;
+    @include font-size($p);
+    &:hover {
+      background-color: $color-secundario;
+    }
+    &.active {
+      background-color: $color-variante;
+    }
+  }
 }
 
 .tabcontent {
   display: none;
-  padding: 0 $space_x2;
+  padding: $space_x2;
   background-color: white;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -44,5 +44,8 @@
 .tabcontent__step3 {
   grid-gap: $space_x2;
   @include display-grid;
-  @include grid-template-columns(auto auto auto auto);
+  @include grid-template-columns(auto auto auto);
+  @include media(desktop-s) {
+    @include grid-template-columns(auto auto auto auto);
+  }
 }
