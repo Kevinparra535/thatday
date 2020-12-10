@@ -1,24 +1,42 @@
 let canvaSubtitle = document.getElementById("canvas__subtitle");
 let canvaTitle = document.getElementById("canvas__title");
-let title, year, month, day, momentTime, subtitle, canvaMap;
+var title, year, month, day, momentTime, subtitle, canvaMap;
+let meses = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
+];
 
 function canvasTexts() {
-  title =
-    document.getElementById("title").value ||
-    "Somos estrellas nadando en el mar de lo infinito";
-
   let location =
     document.getElementById("location__input").value || "Bogotá, Colombia";
 
   year = document.getElementById("year").value || "2020";
 
-  month = document.getElementById("month").value || "2020";
+  month = document.getElementById("month").value || 0;
 
-  day = document.getElementById("day").value || "2020";
+  day = document.getElementById("day").value || "01";
 
-  momentTime = document.getElementById("momentTime").value || "00:00";
+  momentTime = document.getElementById("momentTime").value || "12:00 pm";
 
-  subtitle = `Debajo de las estrellas en ${location}. Un ${day} de ${month} del ${year}, a las ${momentTime}`;
+  title =
+    document.getElementById("title").value ||
+    "Somos estrellas nadando en el mar de lo infinito";
+
+  for (let i = 0; i <= month; i++) {
+    var textMonth = meses[i];
+  }
+
+  subtitle = `Debajo de las estrellas en ${location}. Un ${day} de ${textMonth} del ${year}, a las ${momentTime}`;
 
   document.getElementById("subtitle").value = `${subtitle}`;
 
@@ -46,7 +64,6 @@ function openCity(evt, cityName) {
 }
 
 // Cambio de fondo
-
 const cubes = document.getElementsByClassName("cube");
 for (let i = 0; i <= cubes.length; i++) {
   cubes[i].addEventListener("click", () => {
@@ -77,7 +94,6 @@ for (let i = 0; i <= cubes.length; i++) {
 }
 
 // Link spotify
-
 function getSpotifyUrl() {
   const codeSpotify = document.getElementById("codeSpotify");
   let urlSpotify = document.getElementById("urlSpotify");
@@ -119,8 +135,7 @@ function initMap() {
     canvaMap = document.getElementById("canvas__map");
     let placeI = place.geometry.viewport.Ra.i;
     let placeJ = place.geometry.viewport.Ra.j;
-    let deg = placeI + placeJ;
-    canvaMap.style.transform = `rotate(${deg}deg)`;
+    coordenadas(placeI, placeJ);
 
     if (!place.geometry) {
       window.alert("No details available for input: '" + place.name + "'");
@@ -158,5 +173,34 @@ function initMap() {
   });
 }
 
+function coordenadas(i, j) {
+  let y = document.getElementById("year");
+  let d = document.getElementById("day");
+  let t = document.getElementById("momentTime");
+  let m = document.getElementById("month");
+  let deg = Math.round(i + j);
+
+  canvaMap.style.transform = `rotate(${deg}deg)`;
+
+  y.addEventListener("change", () => {
+    let coord = Number(y.value) / deg;
+    canvaMap.style.transform = `rotate(${coord}deg)`;
+  });
+
+  d.addEventListener("change", () => {
+    let coord = Number(d.value) % deg;
+    canvaMap.style.transform = `rotate(${coord}deg)`;
+  });
+
+  t.addEventListener("change", () => {
+    let coord = parseFloat(t.value) % deg;
+    canvaMap.style.transform = `rotate(${coord}deg)`;
+  });
+
+  m.addEventListener("change", () => {
+    let coord = Number(m.value) / deg;
+    canvaMap.style.transform = `rotate(${coord}deg)`;
+  });
+}
 
 canvasTexts();

@@ -14,22 +14,17 @@
   <body>
     <main class="main">
       <div>
-        <img
-          class="canvas__preview"
-          src="../src/img/design/mockup.png"
-          id="preview"
-          alt="your design"
-        />
+        <canvas class="canvas__preview"></canvas>
         <div class="canvas" id="canva__design">
-          <h2 class="canvas__title" id="canvas__title">
-            Somos estrellas nadando en el mar de lo infinito
-          </h2>
           <img
             class="canvas__map"
             id="canvas__map"
             src="./../src/img/design/canva__map.webp"
             alt="map"
           />
+          <h2 class="canvas__title" id="canvas__title">
+            Somos estrellas nadando en el mar de lo infinito
+          </h2>
           <div class="canvas__subtitle">
             <p id="canvas__subtitle"></p>
             <img
@@ -90,20 +85,21 @@
               id="year"
               value="2020"
               placeholder="Año"
+              onchange="coordenadas()"
             />
             <select class="date" id="month">
-              <option value="Enero">Enero</option>
-              <option value="Febrero">Febrero</option>
-              <option value="Marzo">Marzo</option>
-              <option value="Abril">Abril</option>
-              <option value="Mayo">Mayo</option>
-              <option value="Junio">Junio</option>
-              <option value="Julio">Julio</option>
-              <option value="Agosto">Agosto</option>
-              <option value="Septiembre">Septiembre</option>
-              <option value="Octubre">Octubre</option>
-              <option value="Noviembre">Noviembre</option>
-              <option value="Diciembre">Diciembre</option>
+              <option value="0">Enero</option>
+              <option value="1">Febrero</option>
+              <option value="2">Marzo</option>
+              <option value="3">Abril</option>
+              <option value="4">Mayo</option>
+              <option value="5">Junio</option>
+              <option value="6">Julio</option>
+              <option value="7">Agosto</option>
+              <option value="8">Septiembre</option>
+              <option value="9">Octubre</option>
+              <option value="10">Noviembre</option>
+              <option value="11">Diciembre</option>
             </select>
 
             <input
@@ -184,12 +180,10 @@
                 id="picture_size"
                 onchange="resizeCanva(this.value)"
               >
-                <option value="picture_medium">
-                  Cuadro Mediano (27 x 38 cm)
-                </option>
-                <option value="picture_small">
-                  Cuadro Pequeño (30 x 20 cm)
-                </option>
+                <option value="a1">A1 (59.4 x 84.1 cm) - $ 330.000 COP</option>
+                <option value="a2">A2 (42 x 59.4 cm) - $ 290.000 COP</option>
+                <option value="a3">A3 (29.7 x 42 cm) - $ 230.000 COP</option>
+                <option value="a4">A4 (21 x 29.7 cm) - $ 190.000 COP</option>
               </select>
             </p>
             <button onclick="openCity(event, 'step3')">Comprar</button>
@@ -226,6 +220,11 @@
       </div>
     </section>
     <link rel="stylesheet" href="../src/css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="/__/firebase/8.1.2/firebase-app.js"></script>
     <script src="../src/js/modal.js"></script>
     <script src="../src/js/main.js"></script>
