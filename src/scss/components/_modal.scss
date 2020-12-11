@@ -21,7 +21,7 @@
 .modal__content {
   padding: $space_x3;
   margin: auto;
-  width: 80%;
+  width: 50%;
   text-align: center;
   background-color: $color-claro;
   h2 {
@@ -33,7 +33,7 @@
   }
   &--form {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     text-align: left;
     input, select {
       @include inputs;
