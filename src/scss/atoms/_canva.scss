@@ -60,8 +60,8 @@
   @include media(desktop-s) {
     top: 10%;
     left: 16%;
-    width: 40%;
-    height: 70%;
+    width: 350px;
+    height: 500px;
     &__title {
       margin: 0 auto;
       text-align: center;
@@ -140,7 +140,7 @@
   }
   @include media(desktop-s) {
     width: 80%;
-    height: 80%;
+    height: auto;
   }
   @include media(desktop-m) {
     width: 90%;
