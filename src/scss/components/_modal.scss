@@ -21,7 +21,7 @@
 .modal__content {
   padding: $space_x3;
   margin: auto;
-  width: 50%;
+  width: 90%;
   text-align: center;
   background-color: $color-claro;
   h2 {
@@ -35,11 +35,35 @@
     margin: 0 auto;
     width: 90%;
     text-align: left;
-    input, select {
+    input,
+    select {
       @include inputs;
     }
   }
   button {
     @include botones;
+  }
+  @include media(desktop-s) {
+    padding: $space_x3;
+    width: 70%;
+    h2 {
+      padding-bottom: $space_x2;
+      color: $color-secundario;
+    }
+    p {
+      color: get-opacity($color-oscuro, 0.7);
+    }
+    &--form {
+      margin: 0 auto;
+      width: 90%;
+      text-align: left;
+      input,
+      select {
+        @include inputs;
+      }
+    }
+    button {
+      @include botones;
+    }
   }
 }

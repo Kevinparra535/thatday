@@ -40,15 +40,15 @@
         <div class="tab">
           <button
             class="tablinks"
-            onclick="openCity(event, 'step1')"
+            onclick="openTab(event, 'step1')"
             id="defaultOpen"
           >
             Momento
           </button>
-          <button class="tablinks" onclick="openCity(event, 'step2')">
+          <button class="tablinks" onclick="openTab(event, 'step2')">
             Textos
           </button>
-          <button class="tablinks" onclick="openCity(event, 'step3')">
+          <button class="tablinks" onclick="openTab(event, 'step3')">
             Diseño
           </button>
         </div>
@@ -115,7 +115,7 @@
             <input name="time" type="time" id="momentTime" />
           </p>
           <div class="next__step">
-            <button onclick="openCity(event, 'step2')">Siguiente</button>
+            <button onclick="openTab(event, 'step2')">Siguiente</button>
           </div>
         </div>
 
@@ -157,7 +157,7 @@
           </p>
 
           <div class="next__step">
-            <button onclick="openCity(event, 'step3')">Siguiente</button>
+            <button onclick="openTab(event, 'step3')">Siguiente</button>
           </div>
         </div>
 
@@ -186,7 +186,7 @@
                 <option value="a4">A4 (21 x 29.7 cm) - $ 190.000 COP</option>
               </select>
             </p>
-            <button onclick="openCity(event, 'step3')">Comprar</button>
+            <button onclick="openTab(event, 'step3')">Comprar</button>
           </div>
         </div>
       </div>
@@ -216,7 +216,7 @@
             </select>
           </p>
         </div>
-        <button onclick="addUser.addDesign()">Continuar</button>
+        <button id="userRegisterDesign">Continuar</button>
       </div>
     </section>
     <link rel="stylesheet" href="../src/css/index.css" />
@@ -225,13 +225,14 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="/__/firebase/8.1.2/firebase-app.js"></script>
-    <script src="../src/js/modal.js"></script>
+    <!-- <script src="/__/firebase/8.1.2/firebase-app.js"></script>
+    <script src="/__/firebase/8.1.2/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script> -->
+
+    <script type="module" src="../index.js"></script>
     <script src="../src/js/main.js"></script>
     <script src="../src/js/canvaSize.js"></script>
-    <script src="../src/js/accordion.js"></script>
+    <script src="../src/js/Tabs.js"></script>
     <script src="../src/js/getTime.js"></script>
-    <script src="/__/firebase/8.1.2/firebase-analytics.js"></script>
-    <script src="/__/firebase/init.js"></script>
   </body>
 </html>

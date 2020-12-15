@@ -1,7 +1,7 @@
 let canvaSubtitle = document.getElementById("canvas__subtitle");
 let canvaTitle = document.getElementById("canvas__title");
 var title, year, month, day, momentTime, subtitle, canvaMap;
-let meses = [
+const meses = [
   "Enero",
   "Febrero",
   "Marzo",
@@ -45,23 +45,6 @@ function canvasTexts() {
 }
 
 // Change Tabs
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-  canvasTexts();
-}
 
 // Cambio de fondo
 const cubes = document.getElementsByClassName("cube");
