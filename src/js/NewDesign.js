@@ -4,7 +4,7 @@ function NewDesign(usuario, email, info) {
   this.usuario = usuario;
   this.email = email;
   this.info = info;
-  // this.showModal();
+  this.showModal();
 }
 
 NewDesign.prototype.addDesign = function () {
