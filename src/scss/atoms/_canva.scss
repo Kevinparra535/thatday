@@ -7,10 +7,10 @@
   align-items: center;
   position: fixed;
   z-index: -1;
-  top: 5%;
-  left: 31%;
-  width: 40%;
-  height: 30%;
+  top: 2%;
+  left: 8%;
+  width: 85%;
+  height: 500px;
   background-image: url("./../img/design/canvaDefault.webp");
   background-repeat: no-repeat;
   background-position: top;
@@ -20,26 +20,27 @@
   @include grid-template-rows(auto auto auto);
   &__title {
     margin: 0 auto;
-    font-size: 5px;
     font-weight: $light;
     font-family: $Fuente2;
     text-align: center;
     color: $color-claro;
+    @include font-size(13px);
   }
   &__subtitle {
     margin: 0 auto;
     width: 80%;
-    font-size: 4px;
     font-weight: $light;
     font-family: $Fuente1;
     text-align: center;
     color: $color-claro;
+    @include font-size(11px);
   }
+
   @include media(tablet) {
-    top: 6%;
-    left: 33%;
-    width: 35%;
-    height: 50%;
+    top: 2%;
+    left: 5%;
+    width: 90%;
+    height: 500px;
     &__title {
       margin: 0 auto;
       font-size: 7px;
@@ -128,15 +129,15 @@
 .canvas__map {
   position: relative;
   margin: 0 auto;
-  width: 120px;
-  height: 120px;
+  width: 90%;
+  height: auto;
   border: 3px solid $color-claro;
   border-radius: 100%;
   object-fit: cover;
   transition: 1s ease-in-out;
   @include media(tablet) {
-    width: 180px;
-    height: 180px;
+    width: 80%;
+    height: auto;
   }
   @include media(desktop-s) {
     width: 80%;
