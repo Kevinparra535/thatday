@@ -5,7 +5,6 @@ let ss = now.getSeconds();
 
 let today = hh + ":" + mm;
 
-console.log(today);
 
 document.getElementById("momentTime").value = today;
 

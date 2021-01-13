@@ -16,6 +16,20 @@ const meses = [
   "Diciembre",
 ];
 
+$("#title")
+  .keyup(function () {
+    var value = $(this).val();
+    $("#canvas__title").html(
+      value || "Somos estrellas nadando en el mar de lo infinito"
+    );
+  })
+  .keyup();
+
+
+$("input").on("change", function () {
+  canvasTexts();
+});
+
 function canvasTexts() {
   let location =
     document.getElementById("location__input").value || "Bogotá, Colombia";
@@ -40,8 +54,8 @@ function canvasTexts() {
 
   document.getElementById("subtitle").value = `${subtitle}`;
 
-  canvaSubtitle.innerHTML = `<p>${subtitle}</p>`;
-  canvaTitle.innerHTML = `${title}`;
+  $("#canvas__title").html(title);
+  $("#canvas__subtitle").html(`<p>${subtitle}</p>`);
 }
 
 // Change Tabs
@@ -157,11 +171,11 @@ function initMap() {
 }
 
 function coordenadas(i, j) {
-  let y = document.getElementById("year");
-  let d = document.getElementById("day");
-  let t = document.getElementById("momentTime");
-  let m = document.getElementById("month");
-  let deg = Math.round(i + j);
+  let y = document.getElementById("year"),
+    d = document.getElementById("day"),
+    t = document.getElementById("momentTime"),
+    m = document.getElementById("month"),
+    deg = Math.round(i + j);
 
   canvaMap.style.transform = `rotate(${deg}deg)`;
 

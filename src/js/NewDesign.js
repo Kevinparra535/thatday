@@ -22,7 +22,6 @@ NewDesign.prototype.addDesign = function () {
 
 NewDesign.prototype.initServices = () => {
   const userData = JSON.parse(localStorage.getItem("UserData"));
-  console.log(userData);
   if (userData.email == "" || userData.autor == "") {
     document.title = `Your Project`;
     modal.style.display = "block";

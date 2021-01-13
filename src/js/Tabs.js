@@ -1,3 +1,9 @@
+$("input").on("keypress", function (e) {
+  if (e.which == 13) {
+    openTab(e, "step2");
+  }
+});
+
 function openTab(evt, cityName) {
   var i, tabcontent, tablinks;
 
