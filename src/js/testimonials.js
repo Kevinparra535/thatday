@@ -5,7 +5,6 @@ $.ajax({
   url: `https://randomuser.me/api/?${key}${limit}${endPoint}`,
   dataType: "json",
   success: function (data) {
-    console.log(data.results)
     let card = data.results.map(
       (user) => `<div class="testimoniesCards">
     <div class="testimoniesCards__user">
