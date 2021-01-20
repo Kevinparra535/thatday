@@ -24,7 +24,7 @@ async function precache() {
     "/",
     "/index.html",
     "/routes/design.html",
-    "/src/css/index.css",
+    // "/src/css/index.css",
     "/src/img/",
     "/src/js/",
     "/index.js",

@@ -2,17 +2,15 @@
 @import "./../tokens/spacings";
 @import "./../tokens/typos";
 
-.header {
+.footer {
   padding: $space $space_x2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  top: 0;
-  right: 0;
-  background-color: get-opacity($color-primario, 0.9);
+  position: relative;
+  z-index: 3;
+  bottom: 0;
+  background-color: get-opacity($color-oscuro, 0.9);
   color: $color-claro;
   &__logo {
     display: flex;
