@@ -10,7 +10,7 @@
   position: relative;
   z-index: 3;
   bottom: 0;
-  background-color: get-opacity($color-oscuro, 0.9);
+  background-color: get-opacity($color-oscuro, 1);
   color: $color-claro;
   &__logo {
     display: flex;

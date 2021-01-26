@@ -3,23 +3,24 @@
 @import "./../tokens/typos";
 
 .hero {
-  padding: $space_x3;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 1;
-  width: 50%;
-  height: 100vh;
-  color: $color-claro;
-  background-color: get-opacity($color-primario, 0.5);
-  h1 {
-    padding-bottom: $space_x3;
-    width: 100%;
-    font-weight: $medium;
-    @include font-size(45px);
-  }
-  button {
-    @include botones;
+  width: 100%;
+  background-image: url("./../img/beautiful-low-angle-shot-of-forest-under-blue-starry-night-sky.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  &__container {
+    padding: $space_x3;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: $space;
+    background-color: get-opacity($color-primario, 0.8);
+    button {
+      outline: none;
+      cursor: pointer;
+    }
   }
 }

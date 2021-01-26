@@ -7,6 +7,7 @@
   position: relative;
   z-index: 3;
   grid-gap: $space_x3;
+  width: 100%;
   height: 100%;
   background-color: $color-bg-claro;
   &__info {
@@ -20,41 +21,25 @@
       @include font-size(40px);
     }
   }
-  &__testimonies {
-    padding: $space_x3;
-    width: 100%;
-    height: 100%;
+  &__images {
+    margin: 0 auto;
+    width: 80%;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 3;
+    column-gap: 15px;
+    column-fill: auto;
     @include display-grid;
-    @include grid-template-columns(1fr grid-repeat(2));
-  }
-}
-
-.testimoniesCards {
-  padding: 0 $space_x3;
-  align-items: center;
-  color: $color-claro;
-  background-color: $color-primario;
-  @include display-grid;
-  @include grid-template-columns(auto auto);
-  &__user {
-    padding: $space $space_x2;
-    width: auto;
-    text-align: center;
+    @include grid-template-columns(33% 33% 33%);
     img {
-      margin: $space_x2 auto;
-      width: 80px;
-      height: 80px;
-      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      border-radius: $space;
       object-fit: cover;
     }
-    h3 {
-      font-weight: $normal;
-      @include font-size($p);
-    }
-  }
-  &__text {
-    display: flex;
-    align-items: center;
-    width: 100%;
   }
 }
