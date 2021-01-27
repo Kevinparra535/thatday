@@ -3,14 +3,14 @@
 @import "./../tokens/typos";
 
 .footer {
-  padding: $space $space_x2;
+  padding: $space_x3 $space_x2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   z-index: 3;
   bottom: 0;
-  background-color: get-opacity($color-oscuro, 1);
+  background-color: $color-oscuro;
   color: $color-claro;
   &__logo {
     display: flex;

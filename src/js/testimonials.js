@@ -1,5 +1,5 @@
 const key = "G5V8-ODN7-A1KD-S8DK";
-const limit = "&results=10";
+const limit = "&results=9";
 const endPoint = "&seed=huskiesarecute&page=1";
 $.ajax({
   url: `https://randomuser.me/api/?${key}${limit}${endPoint}`,
