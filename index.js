@@ -5,11 +5,15 @@ let email = document.getElementById("email");
 let info = document.getElementById("info");
 
 const addNewDesign = new NewDesign(usuario, email, info);
-const userRegisterDesign = document.getElementById("userRegisterDesign");
+const userRegisterDesign = document.querySelector(".userRegisterDesign");
 
-userRegisterDesign.addEventListener("click", () => {
+userRegisterDesign.addEventListener("click", saveNewDesign)
+
+
+function saveNewDesign() {
+  // console.log("click");
   addNewDesign.addDesign();
-});
+}
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sw.js").catch((error) => {
