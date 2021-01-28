@@ -25,7 +25,6 @@ $("#title")
   })
   .keyup();
 
-
 $("input").on("change", function () {
   canvasTexts();
 });
@@ -130,8 +129,9 @@ function initMap() {
     marker.setVisible(false);
     const place = autocomplete.getPlace();
     canvaMap = document.getElementById("canvas__map");
-    let placeI = place.geometry.viewport.Ra.i;
-    let placeJ = place.geometry.viewport.Ra.j;
+    console.log(place.geometry.viewport);
+    let placeI = place.geometry.viewport.Qa.i;
+    let placeJ = place.geometry.viewport.Qa.j;
     coordenadas(placeI, placeJ);
 
     if (!place.geometry) {
